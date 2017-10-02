@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="helper"
+          class="org.faoxis.spring4pro.chapter3.methodLookup.MyHelper"
+          scope="prototype" />
+
+    <bean id="abstractLookupBean"
+          class="org.faoxis.spring4pro.chapter3.methodLookup.AbstractLookupDemoBean">
+        <lookup-method name="getMyHelper" bean="helper"/>
+    </bean>
+
+    <bean id="standardLookupBean"
+          class="org.faoxis.spring4pro.chapter3.methodLookup.StandardLookupDemoBean">
+        <property name="myHelper" ref="helper"/>
+    </bean>
+
+
+</beans>

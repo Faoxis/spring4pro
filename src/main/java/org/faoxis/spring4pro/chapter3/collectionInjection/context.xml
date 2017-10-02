@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd" >
+
+    <bean id="oracle"
+          name="wiseworm"
+          class="org.faoxis.spring4pro.chapter3.collectionInjection.BookwormOracle">
+    </bean>
+
+    <bean id="injectedCollection"
+          class="org.faoxis.spring4pro.chapter3.collectionInjection.CollectionInjection">
+
+        <property name="map">
+            <map>
+                <entry key="somValue">
+                    <value>Hello World!</value>
+                </entry>
+            </map>
+        </property>
+
+        <property name="props">
+            <props>
+                <prop key="firstName">Kris</prop>
+                <prop key="secondName">Schaefer</prop>
+            </props>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>Hello World from st!</value>
+                <ref bean="oracle" />
+            </set>
+        </property>
+
+        <property name="list">
+            <list>
+                <value>Hello World from list!</value>
+                <ref bean="oracle" />
+            </list>
+        </property>
+
+    </bean>
+
+</beans>
+

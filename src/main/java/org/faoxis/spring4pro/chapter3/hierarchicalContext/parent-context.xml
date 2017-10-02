@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="target"-->
+          <!--class="org.faoxis.spring4pro.chapter3.hierarchicalContext.SimpleTarget"-->
+          <!--p:val="This is some string" />-->
+
+    <bean id="firstInjectedBean"
+          class="java.lang.String"
+          c:_0="First injected bean at parent" />
+
+    <bean id="secondInjectedBean"
+          class="java.lang.String"
+          c:_0="Second injected bean at parent" />
+
+
+</beans>

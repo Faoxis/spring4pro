@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<bean id="messageRenderer"-->
+          <!--class="org.faoxis.spring4pro.chapter3.declareSpringComponents.HelloWorldMessageRenderer">-->
+        <!--<property name="messageProvider" ref="messageProvider" />-->
+    <!--</bean>-->
+
+    <!--<bean id="messageRenderer"-->
+          <!--class="org.faoxis.spring4pro.chapter3.declareSpringComponents.HelloWorldMessageRenderer"-->
+          <!--p:messageProvider-ref="messageProvider" />-->
+
+    <!--<bean id="messageProvider"-->
+          <!--class="org.faoxis.spring4pro.chapter3.declareSpringComponents.HelloWorldMessageProvider"/>-->
+
+    <context:component-scan base-package="org.faoxis.spring4pro.chapter3.declareSpringComponents" />
+
+    <!--<bean id="message" class="java.lang.String" c:_0="This is configurable string" />-->
+
+    <!--Constructor injection-->
+    <!--<bean id="confMessageProvider"-->
+          <!--class="org.faoxis.spring4pro.chapter3.declareSpringComponents.ConfigurableMessageProvider">-->
+        <!--<constructor-arg value="This is really awesome string" />-->
+    <!--</bean>-->
+
+    <bean id="confMessageProvider"
+          class="org.faoxis.spring4pro.chapter3.declareSpringComponents.ConfigurableMessageProvider"
+          c:message="This is really awesome string"/>
+
+</beans>
+
+

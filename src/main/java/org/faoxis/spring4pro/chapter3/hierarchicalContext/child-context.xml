@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="targetPrinter"-->
+          <!--class="org.faoxis.spring4pro.chapter3.hierarchicalContext.TargetPrinter"-->
+          <!--c:_0=-->
+
+
+    <bean id="target1"
+          class="org.faoxis.spring4pro.chapter3.hierarchicalContext.SimpleTarget"
+          p:val-ref="firstInjectedBean" />
+
+    <bean id="target2"
+          class="org.faoxis.spring4pro.chapter3.hierarchicalContext.SimpleTarget">
+        <property name="val">
+            <ref parent="secondInjectedBean" />
+        </property>
+    </bean>
+
+    <!--<bean id="target2"-->
+          <!--class="org.faoxis.spring4pro.chapter3.hierarchicalContext.SimpleTarget"-->
+          <!--p:val="secondInjectedBean"  />-->
+
+</beans>
