@@ -1,4 +1,4 @@
-package org.faoxis.spring4pro.chapter4.interfaceForSpringInit;
+package org.faoxis.spring4pro.chapter4.beanInit.interfaceForSpringInit;
 
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.InitializingBean;
@@ -47,7 +47,7 @@ public class SimpleBeanWithInterface implements InitializingBean {
         GenericXmlApplicationContext context
                 = new GenericXmlApplicationContext();
 
-        context.load("org/faoxis/spring4pro/chapter4/interfaceForSpringInit/context.xml");
+        context.load("org/faoxis/spring4pro/chapter4/beanInit/interfaceForSpringInit/context.xml");
         context.refresh();
 
         System.out.println("--------------------------------------------------");

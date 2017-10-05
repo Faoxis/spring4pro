@@ -1,4 +1,4 @@
-package org.faoxis.spring4pro.chapter4.callbackMethodForSpringInit;
+package org.faoxis.spring4pro.chapter4.beanInit.callbackMethodForSpringInit;
 
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.context.ApplicationContext;
@@ -43,7 +43,7 @@ public class SimpleBean {
     public static void main(String[] args) {
         GenericXmlApplicationContext context = new GenericXmlApplicationContext();
 
-        context.load("org/faoxis/spring4pro/chapter4/callbackMethodForSpringInit/context.xml");
+        context.load("org/faoxis/spring4pro/chapter4/beanInit/callbackMethodForSpringInit/context.xml");
         context.refresh();
 
         System.out.println("---------------------------------------");
