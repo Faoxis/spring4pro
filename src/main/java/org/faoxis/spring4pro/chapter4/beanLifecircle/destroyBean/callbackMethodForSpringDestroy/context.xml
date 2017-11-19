@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="true">
+
+    <context:annotation-config/>
+
+    <bean id="simpleBean"
+          class="org.faoxis.spring4pro.chapter4.beanLifecircle.destroyBean.callbackMethodForSpringDestroy.DestructiveBean"
+          destroy-method="destroy"
+          p:filePath="testFile.txt" />
+
+    <bean id="simpleBean2"
+          class="org.faoxis.spring4pro.chapter4.beanLifecircle.destroyBean.callbackMethodForSpringDestroy.DestructiveBean"
+          destroy-method="destroy" />
+
+</beans>
+

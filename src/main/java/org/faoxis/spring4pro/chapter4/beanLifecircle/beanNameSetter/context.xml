@@ -2,14 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd"
-       default-lazy-init="true">
+        http://www.springframework.org/schema/beans/spring-beans.xsd" >
 
-    <bean id="simpleBean1"
-          class="org.faoxis.spring4pro.chapter4.beanInit.interfaceForSpringInit.SimpleBeanWithInterface"
-          p:name="Another Name"
-          p:age="56" />
-
+    <bean id="simpleBean"
+          class="org.faoxis.spring4pro.chapter4.beanLifecircle.beanNameSetter.SetBeanNameExample" />
 
 </beans>
 

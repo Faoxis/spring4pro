@@ -5,14 +5,10 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd"
        default-lazy-init="true">
 
-    <bean id="simpleBean"
-          class="org.faoxis.spring4pro.chapter4.destroyBean.callbackMethodForSpringDestroy.DestructiveBean"
-          destroy-method="destroy"
-          p:filePath="testFile.txt" />
-
-    <bean id="simpleBean2"
-          class="org.faoxis.spring4pro.chapter4.destroyBean.callbackMethodForSpringDestroy.DestructiveBean"
-          destroy-method="destroy" />
+    <bean id="simpleBean1"
+          class="org.faoxis.spring4pro.chapter4.beanLifecircle.beanInit.annotationForSpringInit.SimpleBeanWithJSR250"
+          p:age="42"
+          p:name="Another Name" />
 
 </beans>
 

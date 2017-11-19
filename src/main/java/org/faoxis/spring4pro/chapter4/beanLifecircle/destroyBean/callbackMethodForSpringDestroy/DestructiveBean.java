@@ -1,4 +1,4 @@
-package org.faoxis.spring4pro.chapter4.destroyBean.callbackMethodForSpringDestroy;
+package org.faoxis.spring4pro.chapter4.beanLifecircle.destroyBean.callbackMethodForSpringDestroy;
 
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.InitializingBean;
@@ -43,7 +43,7 @@ public class DestructiveBean implements InitializingBean {
         GenericXmlApplicationContext context
                 = new GenericXmlApplicationContext();
 
-        context.load("org/faoxis/spring4pro/chapter4/destroyBean/callbackMethodForSpringDestroy/context.xml");
+        context.load("org/faoxis/spring4pro/chapter4/beanLifecircle/destroyBean/callbackMethodForSpringDestroy/context.xml");
         context.refresh();
 
         System.out.println("---------------------------------");

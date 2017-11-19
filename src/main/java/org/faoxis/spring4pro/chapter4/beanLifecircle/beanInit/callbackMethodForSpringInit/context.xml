@@ -6,18 +6,18 @@
         default-lazy-init="true">
 
     <bean id="simpleBean"
-          class="org.faoxis.spring4pro.chapter4.beanInit.callbackMethodForSpringInit.SimpleBean"
+          class="org.faoxis.spring4pro.chapter4.beanLifecircle.beanInit.callbackMethodForSpringInit.SimpleBean"
           init-method="afterSpringInit"
           p:name="SomeBody Else"
           p:age="32" />
 
     <bean id="simpleBean2"
-          class="org.faoxis.spring4pro.chapter4.beanInit.callbackMethodForSpringInit.SimpleBean"
+          class="org.faoxis.spring4pro.chapter4.beanLifecircle.beanInit.callbackMethodForSpringInit.SimpleBean"
           init-method="afterSpringInit"
           p:age="22"/>
 
     <bean id="simpleBean3"
-          class="org.faoxis.spring4pro.chapter4.beanInit.callbackMethodForSpringInit.SimpleBean"
+          class="org.faoxis.spring4pro.chapter4.beanLifecircle.beanInit.callbackMethodForSpringInit.SimpleBean"
           init-method="afterSpringInit"
           p:name="Super Name"/>
 </beans>

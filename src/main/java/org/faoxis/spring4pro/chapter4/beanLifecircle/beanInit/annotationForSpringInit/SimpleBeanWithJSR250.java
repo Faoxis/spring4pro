@@ -1,4 +1,4 @@
-package org.faoxis.spring4pro.chapter4.beanInit.annotationForSpringInit;
+package org.faoxis.spring4pro.chapter4.beanLifecircle.beanInit.annotationForSpringInit;
 
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.context.ApplicationContext;
@@ -43,7 +43,7 @@ public class SimpleBeanWithJSR250 {
         GenericXmlApplicationContext context
                 = new GenericXmlApplicationContext();
 
-        context.load("org/faoxis/spring4pro/chapter4/beanInit/annotationForSpringInit/context.xml");
+        context.load("org/faoxis/spring4pro/chapter4/beanLifecircle/beanInit/annotationForSpringInit/context.xml");
         context.refresh();
 
         System.out.println("----------------------------------------");

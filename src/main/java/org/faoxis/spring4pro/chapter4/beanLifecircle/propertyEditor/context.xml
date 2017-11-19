@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="true">
+
+    <bean id="customEditorConfigurer"
+          class="org.springframework.beans.factory.config.CustomEditorConfigurer" >
+
+        <property name="customEditors" >
+            <map>
+                <entry key="org.faoxis.spring4pro.chapter4.beanLifecircle.propertyEditor.Name"
+                       value="org.faoxis.spring4pro.chapter4.beanLifecircle.propertyEditor.NamePropertyEditor" />
+            </map>
+        </property>
+    </bean>
+
+    <bean id="example"
+          class="org.faoxis.spring4pro.chapter4.beanLifecircle.propertyEditor.PropertyEditorExample"
+          p:name="Sergei Samoilov" />
+
+</beans>

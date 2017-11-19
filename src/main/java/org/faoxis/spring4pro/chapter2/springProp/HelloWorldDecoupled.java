@@ -1,11 +1,12 @@
 package org.faoxis.spring4pro.chapter2.springProp;
 
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class HelloWorldDecoupled {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext(
+        BeanFactory context = new ClassPathXmlApplicationContext(
                 "org/faoxis/spring4pro/chapter2/springProp/app-context.xml"
         );
 

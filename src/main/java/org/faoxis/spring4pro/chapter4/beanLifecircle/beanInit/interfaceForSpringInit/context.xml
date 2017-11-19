@@ -6,9 +6,10 @@
        default-lazy-init="true">
 
     <bean id="simpleBean1"
-          class="org.faoxis.spring4pro.chapter4.beanInit.annotationForSpringInit.SimpleBeanWithJSR250"
-          p:age="42"
-          p:name="Another Name" />
+          class="org.faoxis.spring4pro.chapter4.beanLifecircle.beanInit.interfaceForSpringInit.SimpleBeanWithInterface"
+          p:name="Another Name"
+          p:age="56" />
+
 
 </beans>
 
